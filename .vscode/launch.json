@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-SecurityNetworkApplication<securityNetwork>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.security.network.SecurityNetworkApplication",
+            "projectName": "securityNetwork",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}

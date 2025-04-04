@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analizador de URLs</title>
+</head>
+<body>
+    <h1>Analizador de URLs</h1>
+    <input type="text" id="urlInput" placeholder="Ingresa una URL">
+    <button onclick="analizarURL()">Analizar</button>
+    <p id="resultado"></p>
+
+    <script>
+        function analizarURL() {
+            let url = document.getElementById("urlInput").value;
+            fetch("http://localhost:9090/seguridad/proteger", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ url: inputUrl.value })
+})
+.then(response => response.text())
+.then(data => {
+    document.getElementById("resultado").innerText = data;
+})
+.catch(error => console.error("Error:", error));
+
+        }
+    </script>
+</body>
+</html>
